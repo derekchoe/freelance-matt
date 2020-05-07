@@ -2,6 +2,8 @@
 import styled from '@emotion/styled';
 
 const Home = styled("div")`
+    color: ${ props => props.theme.color.header};
+
     & .header {
         &__header {
             font-weight: bold;

@@ -5,26 +5,25 @@ const About = styled("div")`
     max-width: 550px;
     margin: auto;
     font-family: ${(props) => props.theme.font.base};
-    color: ${(props) => props.theme.color.black};
+    color: ${(props) => props.theme.color.header};
+    padding: ${(props) => props.theme.spacing.medium};
 
     & p,
     li {
         color: ${(props) => props.theme.color.grey};
         font-size: ${(props) => props.theme.fontSize.medium};
+        display: inherit;
     }
 
-    & ul,
-    li {
-        display: inherit;
+    & ul {
         padding: ${(props) => props.theme.spacing.smallest} 0;
-        font-size: ${(props) => props.theme.fontSize.tiny};
         margin: 0;
-        font-weight: 600;
     }
 
     & h3 {
+        color: ${(props) => props.theme.color.tag};
         margin: 0;
-        font-size: ${ props => props.theme.fontSize.small};
+        font-size: ${(props) => props.theme.fontSize.base};
     }
 
     & .about {
@@ -39,14 +38,18 @@ const About = styled("div")`
         &__action {
             color: #00c358;
         }
-        &__profile {
-            width: 280px;
-        }
+    }
 
-        &__box {
-            padding: ${(props) => props.theme.spacing.small};
-            border: 1px solid ${(props) => props.theme.color.border};
-            margin-bottom: ${(props) => props.theme.spacing.small};
+    @media (max-width: ${(props) => props.theme.media.mobile}) {
+        max-width: 275px;
+        padding: ${(props) => props.theme.spacing.medium};
+
+        & .about {
+            &__grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto;
+                grid-template-areas: ".";
+            }
         }
     }
 `;

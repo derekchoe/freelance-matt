@@ -26,7 +26,7 @@ export default {
         medium: "1005px",
         tablet: "768px",
         mobile: "576px",
-        tiny: "340px",
+        tiny: "400px",
     },
     spacing: {
         smallest: "3px",
@@ -35,6 +35,9 @@ export default {
         medium: "24px",
         large: "36px",
         huge: "48px",
+    },
+    zIndex:{
+        modal: 10000
     },
     helpers: {
         flexCenter: css`

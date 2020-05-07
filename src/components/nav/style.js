@@ -4,14 +4,15 @@ import styled from "@emotion/styled";
 const Nav = styled("nav")`
     height: ${(props) => props.theme.spacing.huge};
     ${(props) => props.theme.helpers.flexCenter};
-    box-shadow: 0px 4px 9px -4px rgba(64, 61, 64, 0.84);
+    box-shadow: 0px 4px 9px -4px ${(props) => props.theme.color.boxShadow};
     color: ${(props) => props.theme.color.grey};
+    background-color: ${(props) =>
+        props.theme.darkMode ? "#2b2b37" : "inherit"};
 
     & a {
         font-family: ${(props) => props.theme.font.base};
         font-weight: 600;
         color: inherit;
-        cursor: pointer;
         text-decoration: inherit;
         font-size: ${(props) => props.theme.fontSize.medium};
         align-items: center;
@@ -22,6 +23,7 @@ const Nav = styled("nav")`
             ${(props) => props.theme.helpers.flexCenter};
             justify-content: space-between;
             width: 550px;
+            padding: 0 ${(props) => props.theme.spacing.small};
         }
 
         &__profile {
@@ -35,32 +37,54 @@ const Nav = styled("nav")`
         }
 
         &__selected {
-            background-color: ${(props) => props.theme.color.border};
-            margin: 0 ${(props) => props.theme.spacing.smallest};
+            background-color: ${(props) => props.theme.color.selected};
             padding: ${(props) => props.theme.spacing.smallest};
             border-radius: ${(props) => props.theme.radius.rounded};
-            ${(props) => props.theme.helpers.flexCenter};
             align-items: center;
+            color: ${(props) => props.theme.color.tag};
+        }
+
+        &__link {
+            margin: 0 ${(props) => props.theme.spacing.smallest};
+            ${(props) => props.theme.helpers.flexCenter};
         }
 
         &__links {
+            & a {
+                margin: 0 ${(props) => props.theme.spacing.tiny};
+            }
+
             ${(props) => props.theme.helpers.flexCenter};
             flex-direction: row;
             align-items: center;
         }
 
-        &__dark {
-            font-family: ${(props) => props.theme.font.header};
-            font-weight: bold;
-            font-size: ${(props) => props.theme.fontSize.small};
-            ${(props) => props.theme.helpers.flexCenter};
-            flex-direction: row;
-            align-items: center;
-            margin: 0 ${(props) => props.theme.spacing.tiny};
+        &__mobile-display{
+            display: none;
         }
+    }
 
-        &__social {
-            margin: 0 ${(props) => props.theme.spacing.tiny};
+    @media (max-width: ${(props) => props.theme.media.tablet}) {
+        & .nav__links {
+            & a {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: ${(props) => props.theme.media.tiny}) {
+        & .nav {
+            &__mobile-none {
+                display: none;
+            }
+
+            &__mobile-display{
+                display: inherit;
+            }
+
+            &__selected{
+                background-color: inherit;
+            }
         }
     }
 `;

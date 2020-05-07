@@ -10,7 +10,7 @@ const Home = styled("div")`
     & .home {
     }
 
-    @media (max-width: ${(props) => props.theme.media.mobile}) {
+    @media (max-width: ${(props) => props.theme.media.tiny}) {
         max-width: 250px;
         padding: ${(props) => props.theme.spacing.large};
     }
