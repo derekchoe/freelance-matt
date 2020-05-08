@@ -26,7 +26,7 @@ export default {
         medium: "1005px",
         tablet: "768px",
         mobile: "576px",
-        tiny: "400px",
+        tiny: "340px",
     },
     spacing: {
         smallest: "3px",

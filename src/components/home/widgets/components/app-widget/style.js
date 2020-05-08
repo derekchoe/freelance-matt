@@ -72,7 +72,7 @@ const AppWidget = styled("div")`
         }
     }
 
-    @media (max-width: ${(props) => props.theme.media.tiny}) {
+    @media (max-width: ${(props) => props.theme.media.mobile}) {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
 

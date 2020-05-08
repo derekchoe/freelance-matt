@@ -9,6 +9,7 @@ import Nav from "../components/nav";
 import Modal from "../components/modal"
 import Home from "../containers/home";
 import About from "../containers/about";
+import Projects from "../containers/projects";
 import Footer from '../components/footer'
 
 const darkModeColor = {
@@ -34,7 +35,7 @@ const lightModeColor = {
 };
 
 function App() {
-    const [darkMode, setDarkMode] = useState(true)
+    const [darkMode, setDarkMode] = useState(false)
     const [isOpen, handleOpen] = useState(false)
     const color = darkMode ? darkModeColor : lightModeColor
 
@@ -58,6 +59,9 @@ function App() {
                     <Switch>
                         <Route path='/about'>
                             <About />
+                        </Route>
+                        <Route path='/projects'>
+                            <Projects />
                         </Route>
                         <Route path='/'>
                             <Home />

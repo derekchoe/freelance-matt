@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 const Modal = styled("div")`
+    display: inherit;
     width: 100vw;
     height: 200vh;
     z-index: ${(props) => props.theme.zIndex.modal};
@@ -28,7 +29,7 @@ const Modal = styled("div")`
             border-radius: ${(props) => props.theme.radius.rounded};
         }
 
-        &__link:hover{
+        &__link:hover {
             background-color: ${(props) => props.theme.color.border};
         }
 
@@ -38,7 +39,7 @@ const Modal = styled("div")`
         }
     }
 
-    @media (min-width: ${(props) => props.theme.media.tiny}) {
+    @media (min-width: ${(props) => props.theme.media.mobile}) {
         display: none;
     }
 `;

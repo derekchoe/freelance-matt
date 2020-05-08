@@ -6,6 +6,7 @@ const Nav = styled("nav")`
     ${(props) => props.theme.helpers.flexCenter};
     box-shadow: 0px 4px 9px -4px ${(props) => props.theme.color.boxShadow};
     color: ${(props) => props.theme.color.grey};
+    padding: ${(props) => props.theme.spacing.small} 0;
     background-color: ${(props) =>
         props.theme.darkMode ? "#2b2b37" : "inherit"};
 
@@ -59,7 +60,7 @@ const Nav = styled("nav")`
             align-items: center;
         }
 
-        &__mobile-display{
+        &__mobile-display {
             display: none;
         }
     }
@@ -72,17 +73,26 @@ const Nav = styled("nav")`
         }
     }
 
-    @media (max-width: ${(props) => props.theme.media.tiny}) {
+    @media (max-width: ${(props) => props.theme.media.mobile}) {
         & .nav {
+            &__container {
+                max-width: 300px;
+            }
+
+            &__profile {
+                width: 20px;
+                height: 20px;
+            }
+
             &__mobile-none {
                 display: none;
             }
 
-            &__mobile-display{
+            &__mobile-display {
                 display: inherit;
             }
 
-            &__selected{
+            &__selected {
                 background-color: inherit;
             }
         }

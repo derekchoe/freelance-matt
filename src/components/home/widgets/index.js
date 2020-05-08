@@ -7,8 +7,8 @@ import {appWidgetArray} from './utils'
 // Components
 import AppWidget from './components/app-widget'
 
-const Projects = () => (
-    <View>
+const Widgets = () => (
+    <View id="projects">
         <h3>Projects</h3>
         {appWidgetArray.map((widget) => (
             <AppWidget key={widget.header} widget={widget} />
@@ -16,4 +16,4 @@ const Projects = () => (
     </View>
 );
 
-export default Projects;
+export default Widgets;

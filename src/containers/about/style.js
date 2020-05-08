@@ -15,6 +15,10 @@ const About = styled("div")`
         display: inherit;
     }
 
+    & li{
+        line-height: 25px;
+    }
+
     & ul {
         padding: ${(props) => props.theme.spacing.smallest} 0;
         margin: 0;
