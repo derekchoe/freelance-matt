@@ -2,7 +2,7 @@
 import styled from '@emotion/styled';
 
 const About = styled("div")`
-    max-width: 550px;
+    max-width: ${(props) => props.theme.maxWidth.desktop};
     margin: auto;
     font-family: ${(props) => props.theme.font.base};
     color: ${(props) => props.theme.color.header};
@@ -15,7 +15,7 @@ const About = styled("div")`
         display: inherit;
     }
 
-    & li{
+    & li {
         line-height: 25px;
     }
 
@@ -45,7 +45,7 @@ const About = styled("div")`
     }
 
     @media (max-width: ${(props) => props.theme.media.mobile}) {
-        max-width: 275px;
+        max-width: ${(props) => props.theme.maxWidth.mobile};
         padding: ${(props) => props.theme.spacing.medium};
 
         & .about {

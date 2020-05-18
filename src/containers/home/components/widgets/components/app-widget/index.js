@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import View from './style';
+import { Link } from "react-router-dom";
 
-import Arrow from "../../../../svgs/arrow";
+import Arrow from "../../../../../../components/svgs/arrow";
 
 
 const AppWidget = ({
@@ -14,6 +15,7 @@ const AppWidget = ({
         linkHref,
         linkText,
         first = false,
+        projectPage= false
     },
 }) => (
     <View first={first}>
@@ -31,14 +33,10 @@ const AppWidget = ({
             </div>
             <div className='app-widget__description'>{description}</div>
             <div className='app-widget__link'>
-                {!!linkHref ? (
-                    <Fragment>
-                        <a href={linkHref}>{linkText}</a>
-                        <Arrow />
-                    </Fragment>
-                ) : (
-                    "Currently Unavailable"
-                )}
+                <Fragment>
+                    {!!projectPage ? <Link to={linkHref}>{linkText}</Link> : <a href={linkHref}>{linkText}</a>}
+                    <Arrow />
+                </Fragment>
             </div>
         </div>
     </View>

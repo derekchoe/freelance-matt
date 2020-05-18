@@ -79,7 +79,6 @@ const Nav = ({darkMode, setDarkMode,isOpen, handleOpen}) => {
                 </div>
                 <div
                     className='nav__mobile-display'
-                    onTouchStart={() => handleOpen(!isOpen)}
                     onClick={() => handleOpen(!isOpen)}
                 >
                     <Hamburger darkMode={darkMode} />

@@ -23,7 +23,7 @@ const Nav = styled("nav")`
         &__container {
             ${(props) => props.theme.helpers.flexCenter};
             justify-content: space-between;
-            width: 550px;
+            width: ${(props) => props.theme.maxWidth.desktop};
             padding: 0 ${(props) => props.theme.spacing.small};
         }
 
@@ -62,6 +62,7 @@ const Nav = styled("nav")`
 
         &__mobile-display {
             display: none;
+            cursor: pointer;
         }
     }
 
@@ -76,7 +77,7 @@ const Nav = styled("nav")`
     @media (max-width: ${(props) => props.theme.media.mobile}) {
         & .nav {
             &__container {
-                max-width: 300px;
+                max-width: ${(props) => props.theme.maxWidth.mobile};
             }
 
             &__profile {

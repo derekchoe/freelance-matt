@@ -3,7 +3,7 @@ import View from "./style";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "../index.css";
 import { ThemeProvider } from "emotion-theming";
-import variables from "../../src/utils/theme";
+import {variables, darkModeColor, lightModeColor} from "../../src/utils/theme";
 
 import Nav from "../components/nav";
 import Modal from "../components/modal"
@@ -11,28 +11,6 @@ import Home from "../containers/home";
 import About from "../containers/about";
 import Projects from "../containers/projects";
 import Footer from '../components/footer'
-
-const darkModeColor = {
-    background: "#22222b",
-    header: "#f7f8fd",
-    grey: "#C9CBD0",
-    border: "#2b2b37",
-    tag: "rgb(255,146,33)",
-    white: "#f7f8fd",
-    boxShadow: "#1e1e23",
-    selected: "#22222b",
-};
-
-const lightModeColor = {
-    background: "rgb(247,248,253)",
-    header: "rgb(34,34,43)",
-    grey: "#5E5E6B",
-    border: "#ebecf5",
-    tag: "#5e5e6b",
-    white: "#f7f8fd",
-    boxShadow: "rgba(64, 61, 64, 0.84)",
-    selected: "#ebecf5",
-};
 
 function App() {
     const [darkMode, setDarkMode] = useState(false)
@@ -61,7 +39,7 @@ function App() {
                             <About />
                         </Route>
                         <Route path='/projects'>
-                            <Projects />
+                            <Projects darkMode={darkMode}/>
                         </Route>
                         <Route path='/'>
                             <Home />

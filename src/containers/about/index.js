@@ -1,8 +1,8 @@
 import React from 'react';
 import View from './style';
 
-import Bio from '../../components/about/bio'
-import Skills from '../../components/about/skills'
+import Bio from "./components/bio";
+import Skills from './components/skills'
 
 const About = () => (
     <View>

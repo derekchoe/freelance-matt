@@ -1,7 +1,7 @@
 import React from 'react';
 import View from './style';
 
-import Arrow from '../../svgs/arrow'
+import Arrow from '../../../../components/svgs/arrow';
 
 const Header = () => (
     <View>

@@ -7,7 +7,7 @@ export const appWidgetArray = [
                tag: "Action Network",
                tagLink: "https://www.actionnetwork.com",
                linkText: "Read More",
-               linkHref: "",
+               linkHref: "https://www.actionnetwork.com/app",
                first: true,
            },
            {
@@ -16,9 +16,10 @@ export const appWidgetArray = [
                description:
                    "A comprehensive data & user management system for athletes",
                tag: "Boditrak Sports",
-               tagLink: "boditraksports.com",
+               tagLink: "https://www.boditraksports.com",
                linkText: "Read More",
-               linkHref: "",
+               linkHref: "/projects?name=altoApp",
+               projectPage: true,
            },
            {
                image: "https://i.ibb.co/m5JtTzN/Kriya-Image.png",
@@ -38,7 +39,8 @@ export const appWidgetArray = [
                tag: "Eventmate",
                tagLink: "",
                linkText: "Read More",
-               linkHref: "",
+               linkHref: "/projects?name=eventMate",
+               projectPage: true,
            },
            {
                image: "https://i.ibb.co/FgKnPD4/Unifyed-Image.png",
@@ -47,14 +49,15 @@ export const appWidgetArray = [
                    "Helping college students share and discover what is happening on their campus",
                tag: "Unifyed",
                linkText: "Read More",
-               linkHref: "",
+               linkHref: "/projects?name=unifyed",
+               projectPage: true,
            },
            {
                image: "https://i.ibb.co/MBhFq1h/Project-A-Image.png",
                header: "Project A",
                description: "Stealth mode...for now",
                tag: "Side Project",
-               linkText: "Read More",
+               linkText: "Join Here",
                linkHref: "",
            },
        ];

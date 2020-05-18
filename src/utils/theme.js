@@ -1,6 +1,32 @@
 import { css } from "@emotion/core";
 
-export default {
+export const darkModeColor = {
+           background: "#22222b",
+           header: "#f7f8fd",
+           grey: "#C9CBD0",
+           border: "#2b2b37",
+           tag: "rgb(255,146,33)",
+           widgetTag: "#22222b",
+           widgetBack: "#2b2b37",
+           boxShadow: "#1e1e23",
+           selected: "#22222b",
+           list: "#eaeaef",
+       };
+
+export const lightModeColor = {
+           background: "rgb(247,248,253)",
+           header: "rgb(34,34,43)",
+           grey: "#5E5E6B",
+           border: "#ebecf5",
+           tag: "#5e5e6b",
+           widgetTag: "#ebecf5",
+           widgetBack: "#f7f8fd",
+           boxShadow: "rgba(64, 61, 64, 0.84)",
+           selected: "#ebecf5",
+           list: "#22222b",
+       };
+
+export const variables = {
     radius: {
         rounded: "4px",
         oval: "18px",
@@ -38,6 +64,10 @@ export default {
     },
     zIndex:{
         modal: 10000
+    },
+    maxWidth: {
+        mobile: '300px',
+        desktop: '550px',
     },
     helpers: {
         flexCenter: css`
