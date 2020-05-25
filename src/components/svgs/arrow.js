@@ -1,6 +1,6 @@
 import React from "react";
 
-function Arrow({ className, height = '9', width = '27', darkMode = false, fill ="rgb(255,146,33)" }) {
+function Arrow({ className, height = '9', width = '27', darkMode = false, fill = "" }) {
     return (
         <svg
             className={className}
@@ -11,7 +11,7 @@ function Arrow({ className, height = '9', width = '27', darkMode = false, fill =
         >
             <g fill='none' fillRule='evenodd' stroke='none' strokeWidth='1'>
                 <g
-                    fill={fill}
+                    fill={fill ? fill : (darkMode ? "#c9cbd0" : "#5e5e6b")}
                     transform='translate(-1071 -1506)'
                 >
                     <g transform='translate(332 1350)'>

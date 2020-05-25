@@ -12,7 +12,7 @@ const Header = () => (
         </h3>
         <div className='header__arrow'>
             <a className="header__arrow-link bounce" href='#projects'>
-                <Arrow height={30} width={40} />
+                <Arrow fill="rgb(255,146,33)" height={30} width={40} />
             </a>
         </div>
     </View>

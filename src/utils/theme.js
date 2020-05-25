@@ -1,30 +1,30 @@
 import { css } from "@emotion/core";
 
 export const darkModeColor = {
-           background: "#22222b",
-           header: "#f7f8fd",
-           grey: "#C9CBD0",
-           border: "#2b2b37",
-           tag: "rgb(255,146,33)",
-           widgetTag: "#22222b",
-           widgetBack: "#2b2b37",
-           boxShadow: "#1e1e23",
-           selected: "#22222b",
-           list: "#eaeaef",
-       };
+    background: "#22222b",
+    header: "#f7f8fd",
+    grey: "#C9CBD0",
+    border: "#2b2b37",
+    tag: "rgb(255,146,33)",
+    widgetTag: "#22222b",
+    widgetBack: "#2b2b37",
+    boxShadow: "#1e1e23",
+    selected: "#22222b",
+    list: "#eaeaef",
+};
 
 export const lightModeColor = {
-           background: "rgb(247,248,253)",
-           header: "rgb(34,34,43)",
-           grey: "#5E5E6B",
-           border: "#ebecf5",
-           tag: "#5e5e6b",
-           widgetTag: "#ebecf5",
-           widgetBack: "#f7f8fd",
-           boxShadow: "rgba(64, 61, 64, 0.84)",
-           selected: "#ebecf5",
-           list: "#22222b",
-       };
+    background: "rgb(247,248,253)",
+    header: "rgb(34,34,43)",
+    grey: "#5E5E6B",
+    border: "#ebecf5",
+    tag: "#5e5e6b",
+    widgetTag: "#ebecf5",
+    widgetBack: "#f7f8fd",
+    boxShadow: "#1e1e23",
+    selected: "#EBECF5",
+    list: "#22222b",
+};
 
 export const variables = {
     radius: {
@@ -38,6 +38,7 @@ export const variables = {
         base: "16px", // 16px
         large: "24px", // 24px
         huge: "36px", // 36px
+        largest: '60px'
     },
     fontWeight: {
         bold: "800",
@@ -67,7 +68,7 @@ export const variables = {
     },
     maxWidth: {
         mobile: '300px',
-        desktop: '550px',
+        desktop: '650px',
     },
     helpers: {
         flexCenter: css`

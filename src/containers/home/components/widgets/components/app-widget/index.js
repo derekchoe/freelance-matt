@@ -10,36 +10,44 @@ const AppWidget = ({
         image,
         header,
         tag,
-        tagLink="",
+        tagLink = "",
         description,
         linkHref,
         linkText,
         first = false,
-        projectPage= false
+        projectPage = false,
     },
-}) => (
-    <View first={first}>
-        <img
-            className={first ? "app-widget__first" : "app-widget__image"}
-            alt='app_image'
-            src={image}
-        />
-        <div className='app-widget__description-container'>
-            <div className='app-widget__header-container'>
-                <h3 className='app-widget__header'>{header}</h3>
-                <a href={tagLink} className='app-widget__company'>
-                    {tag}
-                </a>
+}) => {
+    return (
+        <View first={first}>
+            <img
+                className={first ? "app-widget__first" : "app-widget__image"}
+                alt='app_image'
+                src={image}
+            />
+            <div className='app-widget__description-container'>
+                <div>
+                    <div className='app-widget__header-container'>
+                        <h3 className='app-widget__header'>{header}</h3>
+                        <a href={tagLink} className='app-widget__company'>
+                            {tag}
+                        </a>
+                    </div>
+                    <div className='app-widget__description'>{description}</div>
+                </div>
+                <div className='app-widget__link'>
+                    <Fragment>
+                        {!!projectPage ? (
+                            <Link to={linkHref}>{linkText}</Link>
+                        ) : (
+                            <a href={linkHref}>{linkText}</a>
+                        )}
+                        <Arrow />
+                    </Fragment>
+                </div>
             </div>
-            <div className='app-widget__description'>{description}</div>
-            <div className='app-widget__link'>
-                <Fragment>
-                    {!!projectPage ? <Link to={linkHref}>{linkText}</Link> : <a href={linkHref}>{linkText}</a>}
-                    <Arrow />
-                </Fragment>
-            </div>
-        </div>
-    </View>
-);
+        </View>
+    );
+};
 
 export default AppWidget;

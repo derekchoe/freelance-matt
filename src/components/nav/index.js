@@ -41,22 +41,32 @@ const Nav = ({darkMode, setDarkMode,isOpen, handleOpen}) => {
                     <Link
                         className={`${
                             isSelected("/", location) ? "nav__selected" : ""
-                        } nav__link`}
+                        } nav__link nav__hover`}
                         to='/'
                     >
                         <img
-                            className='nav__profile'
+                            className='nav__profile nav__hover'
                             alt='profile'
                             src='https://i.ibb.co/SJCjt42/Navpic-Dark.png'
                         />
                         <span className='nav__mobile-none'>Matt Silverman</span>
                     </Link>
+                    {location.includes('/about') ? (
+                        <Link
+                            className="nav__link nav__hover"
+                            to='/'
+                        >
+                            <span className='nav__mobile-none'>Projects</span>
+                        </Link>
+                    ) : (
+                        <a href="#projects" className="nav__mobile-none nav__link nav__hover">Projects</a>
+                    )}
                     <Link
                         className={`${
                             isSelected("/about", location)
                                 ? "nav__selected"
                                 : ""
-                        } nav__link nav__mobile-none`}
+                        } nav__link nav__mobile-none nav__hover`}
                         to='/about'
                     >
                         About
@@ -66,7 +76,7 @@ const Nav = ({darkMode, setDarkMode,isOpen, handleOpen}) => {
                     {socialLinks.map((el) => {
                         const { Icon, href } = el;
                         return (
-                            <a key={href} href={href}>
+                            <a className="nav__hover" key={href} href={href}>
                                 <Icon darkMode={darkMode} />
                             </a>
                         );

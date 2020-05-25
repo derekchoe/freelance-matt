@@ -13,6 +13,8 @@ const AppWidget = styled("div")`
         box-shadow: 0px 0px 5px -3px ${(props) => props.theme.color.boxShadow};
         border-radius: ${(props) => props.theme.radius.rounded};
         transform: scale(1.005);
+        border-bottom: 0;
+        background-color: ${(props) => props.theme.color.widgetBack};
     }
 
     & .app-widget {
@@ -43,15 +45,20 @@ const AppWidget = styled("div")`
             font-family: ${(props) => props.theme.font.base};
             color: ${(props) => props.theme.color.grey};
             padding: ${(props) => props.theme.spacing.tiny};
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         &__company {
             padding: ${(props) => props.theme.spacing.tiny};
             background-color: ${(props) => props.theme.color.selected};
-            color: ${(props) => props.theme.color.tag};
+            color: ${(props) =>
+                props.theme.darkMode ? "rgb(255,146,33)" : "#a4a4aa"};
             font-size: ${(props) => props.theme.fontSize.tiny};
             font-weight: 600;
             border-radius: ${(props) => props.theme.radius.rounded};
+            text-decoration: none;
         }
 
         &__description {

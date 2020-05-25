@@ -9,7 +9,7 @@ import AppWidget from './components/app-widget'
 
 const Widgets = () => (
     <View id="projects">
-        <h3>Projects</h3>
+        <h3 className="widgets__header">Projects</h3>
         {appWidgetArray.map((widget) => (
             <AppWidget key={widget.header} widget={widget} />
         ))}

@@ -4,7 +4,8 @@ export const bioArray = [
            <p>
                I’m Matt, a product designer from San Francisco. I specialize in
                user experience, interaction, and mobile design. Most recently, I
-               was as a product designer at <span className="about__action">Action Network</span> in San
+               was as a product designer at{" "}
+               <span className='about__action'>Action Network</span> in San
                Francisco, working on the future of sports betting. Right now I
                am looking for something new. My interests are in consumer
                products, and helping to solve the needs of people and industries
@@ -13,9 +14,12 @@ export const bioArray = [
            <p>
                In free time you will find me hacking away at a side project, and
                staying active within the design community. If you would like to
-               collaborate, feel free to reach out or join my Slack! I have a
-               deep interest in becoming a creative coder - Any tips? Feel free
-               to reach out! - I am currently learning Javascript, and
+               collaborate, feel free to reach out or join my{" "}
+               <a href='https://bit.ly/2VUa2pj' className='about__slack'>
+                   Slack
+               </a>
+               ! I have a deep interest in becoming a creative coder - Any tips?
+               Feel free to reach out! - I am currently learning Javascript, and
                frameworks like React Native.
            </p>,
            <p>

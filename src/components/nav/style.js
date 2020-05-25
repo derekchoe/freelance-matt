@@ -24,7 +24,7 @@ const Nav = styled("nav")`
             ${(props) => props.theme.helpers.flexCenter};
             justify-content: space-between;
             width: ${(props) => props.theme.maxWidth.desktop};
-            padding: 0 ${(props) => props.theme.spacing.small};
+            padding: ${(props) => props.theme.spacing.small};
         }
 
         &__profile {
@@ -63,6 +63,16 @@ const Nav = styled("nav")`
         &__mobile-display {
             display: none;
             cursor: pointer;
+        }
+
+
+        &__hover{
+            padding: ${ props => props.theme.spacing.smallest};
+            border-radius: ${ props => props.theme.radius.rounded};
+        }
+
+        &__hover:hover{
+            background-color: ${ props => props.theme.color.selected};
         }
     }
 

@@ -7,7 +7,7 @@ const Skills = () => (
     <View>
         {aboutArray.map((item) => (
             <div key={item.header} className='skills__box'>
-                <h3>{item.header}</h3>
+                <h3 className="skills__header">{item.header}</h3>
                 <ul>
                     {item.list.map((listItem) => (
                         <li key={listItem}>{listItem}</li>

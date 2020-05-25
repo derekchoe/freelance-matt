@@ -12,6 +12,7 @@ const About = () => (
             <Skills/>
         </div>
     </View>
-);
+)
+
 
 export default About;

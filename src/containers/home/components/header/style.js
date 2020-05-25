@@ -8,12 +8,14 @@ const Home = styled("div")`
         &__header {
             font-weight: bold;
             font-family: ${(props) => props.theme.font.header};
+            font-size: ${ props => props.theme.fontSize.largest};
         }
 
         &__description {
             color: ${(props) => props.theme.color.grey};
             font-family: ${(props) => props.theme.font.base};
             font-weight: 900;
+            font-size: ${ props => props.theme.fontSize.huge};
         }
 
         &__arrow {
@@ -40,17 +42,13 @@ const Home = styled("div")`
     }
     @keyframes bounce-7 {
         0%,
-        20%,
         50%,
-        80%,
         100% {
             transform: translateX(0);
         }
-        40% {
+        25%,
+        75%{
             transform: translateX(-25px);
-        }
-        60% {
-            transform: translateX(-12.5px);
         }
     }
 

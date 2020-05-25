@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import View from './style';
 import { Link } from "react-router-dom";
 import {  useLocation } from "react-router-dom";
@@ -9,18 +9,22 @@ import { appWidgetArray, getCarouselIds } from "./utils.js";
 // SVG
 import Arrow from '../../components/svgs/arrow'
 
-const Projects = ({ darkMode}) => {
+const Projects = ({ darkMode }) => {
     function useQuery() {
         return new URLSearchParams(useLocation().search);
     }
     const projectName = useQuery().get('name')
 
     const { image, header, tag, description, summary, id, images, extra, svg } = appWidgetArray[projectName];
-    const {Dark, Light} = svg
+    const { Dark, Light } = svg
 
     const carousel = getCarouselIds(id).map(carouselId => {
         return Object.values(appWidgetArray).find(app => app.id === carouselId);
     })
+
+    useEffect(() => {
+        window.scroll(0,0)
+    }, [])
 
 
     return (
@@ -63,41 +67,43 @@ const Projects = ({ darkMode}) => {
                     ))}
                 </div>
             </div>
-            {summary.map((el) => (
-                <div key={el.header} className='projects__summary'>
-                    <h3>{el.header}</h3>
-                    <p>{el.description}</p>
-                </div>
-            ))}
-            <div className='projects__images'>
-                {images.map((image) => (
-                    <img
-                        alt='project_images'
-                        className='projects__image'
-                        src={image}
-                        key={image}
-                    />
+            <div className="projects__summary-container">
+                {summary.map((el) => (
+                    <div key={el.header} className='projects__summary'>
+                        <h3>{el.header}</h3>
+                        <p>{el.description}</p>
+                    </div>
                 ))}
-                <div>
-                    {extra &&
-                        extra.map((image) => (
-                            <img
-                                alt='project_images'
-                                className='projects__extra'
-                                src={image}
-                                key={image}
-                            />
-                        ))}
+                <div className='projects__images'>
+                    {images.map((image) => (
+                        <img
+                            alt='project_images'
+                            className='projects__image'
+                            src={image}
+                            key={image}
+                        />
+                    ))}
+                    <div>
+                        {extra &&
+                            extra.map((image) => (
+                                <img
+                                    alt='project_images'
+                                    className='projects__extra'
+                                    src={image}
+                                    key={image}
+                                />
+                            ))}
+                    </div>
                 </div>
-            </div>
-            <div className='projects__image-tag'>
-                {tag} core experience screens
-            </div>
-            <div className='projects__flow'>
-                {darkMode ? <Dark /> : <Light />}
-            </div>
-            <div className='projects__image-tag'>
-                {tag} information architecture core experience flow
+                <div className='projects__image-tag'>
+                    {tag} core experience screens
+                </div>
+                <div className='projects__flow'>
+                    {darkMode ? <Dark /> : <Light />}
+                </div>
+                <div className='projects__image-tag'>
+                    {tag} information architecture core experience flow
+                </div>
             </div>
         </View>
     );

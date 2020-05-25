@@ -33,20 +33,24 @@ const About = styled("div")`
     & .about {
         &__grid {
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: 330px 1fr;
             grid-template-rows: 1fr;
             gap: 1px 60px;
             grid-template-areas: ". .";
         }
 
         &__action {
-            color: #00c358;
+            color: ${(props) => (props.theme.darkMode ? "#fda30f" : "#00c358")};
+        }
+
+        &__slack {
+            color: ${(props) => (props.theme.darkMode ? "#fda30f" : "#e0235c")};
+            text-decoration: none;
         }
     }
 
     @media (max-width: ${(props) => props.theme.media.mobile}) {
         max-width: ${(props) => props.theme.maxWidth.mobile};
-        padding: ${(props) => props.theme.spacing.medium};
 
         & .about {
             &__grid {
