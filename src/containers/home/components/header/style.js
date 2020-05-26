@@ -8,14 +8,14 @@ const Home = styled("div")`
         &__header {
             font-weight: bold;
             font-family: ${(props) => props.theme.font.header};
-            font-size: ${ props => props.theme.fontSize.largest};
+            font-size: ${(props) => props.theme.fontSize.largest};
         }
 
         &__description {
             color: ${(props) => props.theme.color.grey};
             font-family: ${(props) => props.theme.font.base};
             font-weight: 900;
-            font-size: ${ props => props.theme.fontSize.huge};
+            font-size: ${(props) => props.theme.fontSize.huge};
         }
 
         &__arrow {
@@ -47,7 +47,7 @@ const Home = styled("div")`
             transform: translateX(0);
         }
         25%,
-        75%{
+        75% {
             transform: translateX(-25px);
         }
     }
@@ -56,6 +56,14 @@ const Home = styled("div")`
         & .header {
             &__arrow {
                 height: 400px;
+            }
+
+            &__header{
+                font-size: ${ props => props.theme.fontSize.huge};
+            }
+
+            &__description {
+                font-size: ${(props) => props.theme.fontSize.large};
             }
         }
     }
